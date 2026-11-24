@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account — The Paw Place 🐾</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-paw"></i></span>
+        <span>The Paw Place</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="paws.html" data-i18n="nav_adoption">Adoption</a></li>
+          <li><a href="products.html" data-i18n="nav_products">Shop</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="lang-toggle-btn" class="icon-btn" type="button"><i class="fas fa-globe"></i> عربي</button>
+        <a href="checkout.html" id="cart-drawer-trigger" class="icon-btn" aria-label="Shopping Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <a href="auth.html" class="btn btn-outline header-auth-btn"><i class="fas fa-user"></i> <span data-i18n="nav_signin">Sign In</span></a>
+        <a href="donate.html" class="btn btn-primary header-donate-btn"><i class="fas fa-heart"></i> <span data-i18n="nav_donate">Donate Now</span></a>
+        <button id="mobile-menu-btn" class="mobile-menu-toggle" type="button" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <!-- Logged Out View -->
+        <div id="auth-logged-out">
+          <div class="form-card" style="max-width:480px;">
+            <div style="text-align:center;margin-bottom:22px;">
+              <div class="logo-icon" style="width:52px;height:52px;font-size:1.5rem;margin:0 auto 12px;"><i class="fas fa-paw"></i></div>
+              <h1 style="font-size:1.65rem;font-weight:800;margin-bottom:4px;">Welcome to The Paw Place</h1>
+              <p style="color:var(--muted);font-size:0.92rem;">Track your orders, adoption applications, donations & favorite pets.</p>
+            </div>
+
+            <div class="auth-tabs">
+              <button type="button" class="auth-tab active" data-tab="login">Sign In</button>
+              <button type="button" class="auth-tab" data-tab="signup">Create Account</button>
+            </div>
+
+            <form id="login-form">
+              <div class="input-group">
+                <label for="login-email"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" id="login-email" placeholder="demo@pawplace.com" required>
+              </div>
+              <div class="input-group">
+                <label for="login-password"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" id="login-password" placeholder="Enter your password" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
+            </form>
+
+            <form id="signup-form" style="display:none;">
+              <div class="input-group">
+                <label for="signup-name"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="signup-name" placeholder="Your full name" required>
+              </div>
+              <div class="input-group">
+                <label for="signup-email"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" id="signup-email" placeholder="you@example.com" required>
+              </div>
+              <div class="input-group">
+                <label for="signup-phone"><i class="fas fa-phone"></i> Phone Number</label>
+                <input type="tel" id="signup-phone" placeholder="+20 1XX XXX XXXX" required>
+              </div>
+              <div class="input-group">
+                <label for="signup-password"><i class="fas fa-lock"></i> Password (min 6 chars)</label>
+                <input type="password" id="signup-password" placeholder="Create a secure password" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Create Free Account</button>
+            </form>
+
+            <div class="demo-box">
+              <p style="color:var(--secondary-dark);margin-bottom:10px;"><strong>Want a quick tour?</strong> Explore the full account dashboard instantly:</p>
+              <button type="button" id="demo-login-btn" class="btn btn-secondary btn-sm">
+                <i class="fas fa-bolt"></i> 1-Click Demo Sign In
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logged In Dashboard View -->
+        <div id="auth-dashboard" style="display:none;">
+          <div class="dashboard-header">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div class="avatar-circle" style="width:56px;height:56px;font-size:1.4rem;background:rgba(255,255,255,0.2);"><i class="fas fa-user"></i></div>
+              <div>
+                <span style="font-size:0.8rem;opacity:0.85;">Paw Place Member</span>
+                <h1 id="dash-user-name" style="font-size:1.6rem;color:#fff;margin-bottom:2px;">Member</h1>
+                <div id="dash-user-email" style="font-size:0.9rem;opacity:0.85;"></div>
+              </div>
+            </div>
+            <button type="button" id="logout-btn" class="btn btn-outline-light btn-sm"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+          </div>
+
+          <div class="stats-strip" style="margin-bottom:24px;">
+            <div class="stat-card"><strong id="dash-stat-orders">0</strong><span>Orders Placed</span></div>
+            <div class="stat-card"><strong id="dash-stat-adoptions">0</strong><span>Adoption Requests</span></div>
+            <div class="stat-card"><strong id="dash-stat-favs">0</strong><span>Saved Pets</span></div>
+            <div class="stat-card"><strong id="dash-stat-donations">0</strong><span>Donations Made</span></div>
+          </div>
+
+          <div class="dashboard-tabs">
+            <button type="button" class="filter-btn dash-tab-btn active" data-panel="panel-orders"><i class="fas fa-box"></i> My Orders</button>
+            <button type="button" class="filter-btn dash-tab-btn" data-panel="panel-adoptions"><i class="fas fa-paw"></i> Adoptions</button>
+            <button type="button" class="filter-btn dash-tab-btn" data-panel="panel-favs"><i class="fas fa-heart"></i> Saved Pets</button>
+            <button type="button" class="filter-btn dash-tab-btn" data-panel="panel-donations"><i class="fas fa-hand-holding-heart"></i> Donations</button>
+          </div>
+
+          <div id="panel-orders" class="dash-panel dash-tab-panel">
+            <h3 style="margin-bottom:16px;">Recent Orders & Service Bookings</h3>
+            <div id="dash-orders-list"></div>
+          </div>
+          <div id="panel-adoptions" class="dash-panel dash-tab-panel" style="display:none;">
+            <h3 style="margin-bottom:16px;">My Adoption Applications</h3>
+            <div id="dash-adoptions-list"></div>
+          </div>
+          <div id="panel-favs" class="dash-panel dash-tab-panel" style="display:none;">
+            <h3 style="margin-bottom:16px;">My Saved Favorite Pets</h3>
+            <div id="dash-favs-grid" class="grid-3"></div>
+          </div>
+          <div id="panel-donations" class="dash-panel dash-tab-panel" style="display:none;">
+            <h3 style="margin-bottom:16px;">Donation Certificates</h3>
+            <div id="dash-donations-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding-top:0;">
+        <span>&copy; 2026 The Paw Place 🐾. All Rights Reserved.</span>
+        <a href="index.html" style="color:rgba(255,255,255,0.75);">← Return Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

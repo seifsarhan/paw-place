@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Paw Place 🐾 — Pet Adoption, Essentials Shop & Vet Care</title>
+  <meta name="description" content="Adopt vaccinated rescue cats & dogs, shop vet-approved pet supplies, and book grooming or clinical care at The Paw Place in Alexandria, Egypt.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-paw"></i></span>
+        <span>The Paw Place</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="paws.html" data-i18n="nav_adoption">Adoption</a></li>
+          <li><a href="products.html" data-i18n="nav_products">Shop</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="lang-toggle-btn" class="icon-btn" type="button" title="Switch Language"><i class="fas fa-globe"></i> عربي</button>
+        <a href="checkout.html" id="cart-drawer-trigger" class="icon-btn" aria-label="Shopping Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <a href="auth.html" class="btn btn-outline header-auth-btn"><i class="fas fa-user"></i> <span data-i18n="nav_signin">Sign In</span></a>
+        <a href="donate.html" class="btn btn-primary header-donate-btn"><i class="fas fa-heart"></i> <span data-i18n="nav_donate">Donate Now</span></a>
+        <button id="mobile-menu-btn" class="mobile-menu-toggle" type="button" aria-label="Open navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <i class="fas fa-shield-heart"></i>
+            <span data-i18n="hero_pill">Alexandria’s Trusted Pet Rescue & Care Center</span>
+          </div>
+          <h1 data-i18n="hero_title">Your Best Friend Is Waiting For You.</h1>
+          <p data-i18n="hero_desc">Adopt a vaccinated rescue pet, shop vet-approved essentials, or book compassionate clinic care — every action helps save stray lives.</p>
+          <div class="hero-buttons">
+            <a href="paws.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-paw"></i> <span data-i18n="hero_cta1">Browse Adoptable Pets</span>
+            </a>
+            <a href="products.html" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-shopping-bag"></i> <span data-i18n="hero_cta2">Shop Essentials</span>
+            </a>
+            <a href="welcome.html" class="btn btn-outline-light btn-lg" title="Watch Intro">
+              <i class="fas fa-play-circle"></i> Intro Video
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>540+</strong>
+              <span>Pets Rescued</span>
+            </div>
+            <div class="hero-stat">
+              <strong>100%</strong>
+              <span>Vet Checked & Vaccinated</span>
+            </div>
+            <div class="hero-stat">
+              <strong>4.9 ★</strong>
+              <span>Community Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Our World -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fas fa-compass"></i> Explore Our World</span>
+          <h2>Everything Your Pet Needs in One Caring Place</h2>
+          <p>From finding a lifelong companion to premium nutrition and expert veterinary care.</p>
+        </div>
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-paw"></i></div>
+            <h3>Pet Adoption</h3>
+            <p>Browse our vaccinated, loving cats and dogs waiting for warm forever homes across Egypt.</p>
+            <a href="paws.html" class="btn btn-outline btn-sm">View Adoptable Pets <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-shopping-bag"></i></div>
+            <h3>Essentials Shop</h3>
+            <p>Vet-selected food, orthopedic beds, smart feeders, and toys. Every purchase supports shelter animals.</p>
+            <a href="products.html" class="btn btn-outline btn-sm">Shop Collection <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-hand-holding-medical"></i></div>
+            <h3>Clinic & Grooming</h3>
+            <p>Book certified vet checkups, luxury stress-free grooming sessions, and positive behavioral training.</p>
+            <a href="services.html" class="btn btn-outline btn-sm">Book Appointment <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Adoptable Pets -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fas fa-heart"></i> Waiting For Love</span>
+          <h2>Meet Our Featured Friends</h2>
+          <p>Every rescue pet is microchipped, dewormed, and cleared by our shelter veterinarians.</p>
+        </div>
+        <div id="home-featured-pets" class="grid-3"></div>
+        <div style="text-align:center;margin-top:34px;">
+          <a href="paws.html" class="btn btn-secondary btn-lg">See All Adoptable Pets <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best-Selling Products -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fas fa-fire"></i> Shop Favorites</span>
+          <h2>Best-Selling Pet Essentials</h2>
+          <p>Fast delivery across Alexandria & Cairo — free shipping on orders over 1,000 EGP.</p>
+        </div>
+        <div id="home-featured-products" class="grid-4"></div>
+        <div style="text-align:center;margin-top:34px;">
+          <a href="products.html" class="btn btn-outline btn-lg">Explore All 16 Products <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Adoption Works -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fas fa-route"></i> Simple Process</span>
+          <h2>How Adoption Works</h2>
+          <p>Three transparent steps to welcome your new best friend home safely.</p>
+        </div>
+        <div class="grid-3">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h3 style="margin-bottom:8px;">Browse & Connect</h3>
+            <p style="color:var(--muted);font-size:0.93rem;">Explore pet profiles, personality traits, and save your favorites to find your ideal match.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h3 style="margin-bottom:8px;">Apply Online</h3>
+            <p style="color:var(--muted);font-size:0.93rem;">Submit a quick 2-minute application and schedule a friendly meet-and-greet at our shelter.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h3 style="margin-bottom:8px;">Welcome Home</h3>
+            <p style="color:var(--muted);font-size:0.93rem;">Take your vaccinated companion home with full medical records and lifetime shelter support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Happy Tails / Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fas fa-star"></i> Happy Tails</span>
+          <h2>Loved by Pet Parents Across Egypt</h2>
+          <p>Real stories from families who adopted, shopped, and cared for their pets with us.</p>
+        </div>
+        <div class="grid-3">
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"Adopting from The Paw Place was seamless! Our kitten arrived healthy, vaccinated, and already litter-trained. The team followed up with us for weeks."</p>
+            <div class="testimonial-author">
+              <div class="avatar-circle">SM</div>
+              <div><strong>Salma Mansour</strong><div style="font-size:0.8rem;color:var(--muted);">Adopted a rescue cat • Alexandria</div></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"The orthopedic bed and automatic feeder arrived in less than 24 hours! Knowing the profits go back to feeding stray animals makes shopping here even better."</p>
+            <div class="testimonial-author">
+              <div class="avatar-circle">KA</div>
+              <div><strong>Karim Abdelrahman</strong><div style="font-size:0.8rem;color:var(--muted);">Verified Shop Customer • Cairo</div></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"Dr. Mariam and the grooming stylists treated my nervous Golden Retriever with so much patience. Easily the cleanest and kindest pet center in Victoria."</p>
+            <div class="testimonial-author">
+              <div class="avatar-circle">NH</div>
+              <div><strong>Nourhan Hafez</strong><div style="font-size:0.8rem;color:var(--muted);">Clinic & Grooming Client • Alexandria</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter & Rescue Updates -->
+    <section class="section section-white" style="padding-top:20px;">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h2>Join Our Rescue Community 🐾</h2>
+            <p>Get new adoptable pet alerts, shelter rescue stories, and exclusive 10% shop promo codes right in your inbox.</p>
+          </div>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="Enter your email address..." required aria-label="Email address">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fas fa-paw"></i></span>
+            <span>The Paw Place</span>
+          </a>
+          <p>Rescuing, rehabilitating, and rehoming stray cats & dogs while providing trusted pet essentials and veterinary care in Alexandria, Egypt.</p>
+          <div class="social-links">
+            <a href="contact.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="contact.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+201286119756" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="paws.html">Adopt a Pet</a></li>
+            <li><a href="products.html">Pet Essentials Shop</a></li>
+            <li><a href="services.html">Vet & Grooming</a></li>
+            <li><a href="donate.html">Support & Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Shelter Info</h4>
+          <ul>
+            <li><a href="about.html">About Our Mission</a></li>
+            <li><a href="adopt_form.html">Adoption Application</a></li>
+            <li><a href="auth.html">My Account & Orders</a></li>
+            <li><a href="contact.html">Contact & FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt" style="color:var(--primary);margin-right:6px;"></i> 7 Alzahri St, Victoria, Alexandria</li>
+            <li><i class="fas fa-phone" style="color:var(--primary);margin-right:6px;"></i> +20 128 611 9756</li>
+            <li><i class="fas fa-envelope" style="color:var(--primary);margin-right:6px;"></i> pawplace@gmail.com</li>
+            <li><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i> Mon–Sat: 10 AM – 5 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Paw Place 🐾. All Rights Reserved.</span>
+        <span>Use code <strong>PAW10</strong> at checkout for 10% off your first order!</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

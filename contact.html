@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — The Paw Place 🐾</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-paw"></i></span>
+        <span>The Paw Place</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="paws.html" data-i18n="nav_adoption">Adoption</a></li>
+          <li><a href="products.html" data-i18n="nav_products">Shop</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="lang-toggle-btn" class="icon-btn" type="button"><i class="fas fa-globe"></i> عربي</button>
+        <a href="checkout.html" id="cart-drawer-trigger" class="icon-btn" aria-label="Shopping Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <a href="auth.html" class="btn btn-outline header-auth-btn"><i class="fas fa-user"></i> <span data-i18n="nav_signin">Sign In</span></a>
+        <a href="donate.html" class="btn btn-primary header-donate-btn"><i class="fas fa-heart"></i> <span data-i18n="nav_donate">Donate Now</span></a>
+        <button id="mobile-menu-btn" class="mobile-menu-toggle" type="button" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner has-bg" style="background-image:url('contact-hero.jpg');">
+      <div class="container">
+        <h1>Get In Touch With The Paw Place</h1>
+        <p>Have a question about adopting, booking a clinic visit, or reporting an injured stray? Our team is here for you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items:stretch;">
+          <div class="map-wrapper">
+            <iframe
+              title="The Paw Place Shelter Location in Victoria, Alexandria"
+              src="https://maps.google.com/maps?q=31.2452%2C29.9783&z=15&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div class="contact-info-card">
+            <h2 style="font-size:1.45rem;margin-bottom:20px;">Shelter & Clinic Details</h2>
+            <div class="contact-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><strong>Address</strong><div style="color:var(--muted);">7 Alzahri St, Victoria, Alexandria, Egypt</div></div>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-phone"></i>
+              <div><strong>Phone & WhatsApp</strong><div style="color:var(--muted);">+20 128 611 9756</div></div>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-envelope"></i>
+              <div><strong>Email</strong><div style="color:var(--muted);">pawplace@gmail.com</div></div>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-clock"></i>
+              <div><strong>Visiting Hours</strong><div style="color:var(--muted);">Mon – Sat: 10:00 AM – 5:00 PM</div></div>
+            </div>
+
+            <div style="margin-top:22px;padding:18px;border-radius:14px;background:var(--primary-soft);border:1px solid rgba(255,107,91,0.3);">
+              <h3 style="font-size:1.05rem;color:var(--primary-dark);margin-bottom:6px;"><i class="fas fa-ambulance"></i> 24/7 Emergency Rescue</h3>
+              <p style="font-size:0.88rem;color:var(--text);margin-bottom:12px;">Found an injured stray animal or need urgent vet assistance? Call our emergency rescue hotline immediately.</p>
+              <a href="tel:+201286119756" class="btn btn-primary btn-block"><i class="fas fa-phone-alt"></i> Call Emergency Line</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="grid-2" style="align-items:start;">
+          <!-- Contact Form -->
+          <div class="form-card" style="max-width:100%;margin:0;">
+            <h2 style="font-size:1.45rem;margin-bottom:6px;"><i class="fas fa-comments" style="color:var(--primary);"></i> Send Us a Message</h2>
+            <p style="color:var(--muted);font-size:0.9rem;margin-bottom:22px;">We reply to every message within 24 hours.</p>
+            <form id="contact-form">
+              <div class="input-group">
+                <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                <input type="text" id="name" placeholder="Full name" required>
+              </div>
+              <div class="input-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+              </div>
+              <div class="input-group">
+                <label for="subject"><i class="fas fa-tag"></i> Topic</label>
+                <select id="subject" required>
+                  <option value="Adoption Inquiry">Adoption Inquiry</option>
+                  <option value="Shop & Order Support">Shop & Order Support</option>
+                  <option value="Vet / Grooming Booking">Vet / Grooming Booking</option>
+                  <option value="Volunteering & Donations">Volunteering & Donations</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+                <textarea id="message" placeholder="How can we help you and your pet?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Interactive FAQ -->
+          <div>
+            <span class="section-badge">Quick Answers</span>
+            <h2 style="font-size:1.6rem;margin-bottom:18px;">Frequently Asked Questions</h2>
+
+            <div class="faq-item open">
+              <button type="button" class="faq-question">Are there fees to adopt a shelter pet? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer">Adoption is 100% free for approved loving families! All pets leave fully vaccinated, dewormed, and with their digital vet passport.</div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-question">How fast is delivery for pet shop orders? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer">Orders in Alexandria arrive within 24 hours, and Cairo/Delta deliveries take 1–2 business days. Shipping is free on orders over 1,000 EGP!</div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-question">Can I visit the shelter before applying? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer">Yes! Visitors are welcome Monday through Saturday from 10:00 AM to 5:00 PM at 7 Alzahri St, Victoria, Alexandria.</div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-question">How can I volunteer or foster a pet? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer">Send us a message selecting "Volunteering & Donations" or drop by our shelter to join our weekend care & rescue team!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding-top:0;">
+        <span>&copy; 2026 The Paw Place 🐾. All Rights Reserved.</span>
+        <span>Alexandria, Egypt • +20 128 611 9756</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
